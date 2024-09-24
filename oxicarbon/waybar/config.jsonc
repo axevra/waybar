@@ -1,0 +1,86 @@
+{
+  "position": "top",
+  "layer": "top",
+  "height": 36,
+  "modules-left": [
+    "custom/icon",
+    "sway/workspaces"
+  ],
+  "modules-center": [
+    "sway/window"
+  ],
+  "modules-right": [
+    "wireplumber",
+    "cpu",
+    "memory",
+    "tray",
+    "clock"
+  ],
+  "custom/icon": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "rofi -show -combi"
+  },
+  "tray": {
+    "spacing": 5
+  },
+  "sway/window": {
+    "max-length": 40
+  },
+  "wireplumber": {
+    "format": "{icon} {volume}",
+    "tooltip": false,
+    "format-muted": " Muted",
+    "on-click": "pamixer -t",
+    "on-click-right": "pavucontrol",
+    "on-scroll-up": "pamixer -i 5",
+    "on-scroll-down": "pamixer -d 5",
+    "scroll-step": 5,
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": [
+        "",
+        "",
+        ""
+      ]
+    }
+  },
+  "cpu": {
+    "format": " {usage}%",
+    "interval": 12
+  },
+  "memory": {
+    "format": " {percentage}%",
+    "interval": 12
+  },
+  "clock": {
+    "format": "{:%H:%M}",
+    "interval": 5,
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "mode": "year",
+      "mode-mon-col": 3,
+      "weeks-pos": "right",
+      "on-scroll": 1,
+      "format": {
+        "months": "<span color='#ffead3'><b>{}</b></span>",
+        "days": "<span color='#ecc6d9'><b>{}</b></span>",
+        "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+        "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+      }
+    },
+    "actions": {
+      "on-click-right": "mode",
+      "on-scroll-up": "tz_up",
+      "on-scroll-down": "tz_down",
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down"
+    }
+  }
+}
