@@ -67,3 +67,8 @@ tooltip {
 #workspaces button.active {
   color: @base04;
 }
+
+#workspaces button.focused {
+  color: @base00;
+  background: @base0E
+}
